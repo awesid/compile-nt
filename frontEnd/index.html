@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="res/index.png" type="image/x-icon">
+    <title>Compile'nt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    
+    
+    <!-- Fonts and Icons-->
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    
+</head>
+<body>
+    <!-- Image and text -->
+    <section id="header">
+        <div>
+            <nav class="navbar navbar-dark bg-dark">
+                <a id="nav_logo" class="navbar-brand" href="#">
+                    <img id="nav_img" src="./res/index.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                    Compile'nt
+                </a>
+            </nav>
+        </div>
+    </section>
+    <section>
+            <div class="container"> 
+                <form>
+                    <label for="code-type">Select</label>
+                    <select id="code-type" class="custom-select">
+                        <option selected>Language</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="cpp11">C++11</option>
+                        <option value="java">Java</option>
+                        <option value="python2">Python2</option>
+                        <option value="python3">Python3</option>
+                    </select>
+                    <div class="form-group">
+                        <label for="sourcecode">Source Code</label>
+                        <textarea class="form-control" id="sourcecode" rows="20"></textarea>
+                    </div>
+                    <div id="std">
+                            <div class="stdin std form-group">
+                                    <label for="stdin">Stdin</label>
+                                    <textarea class="form-control" id="stdin" rows="5" coloums = "5"></textarea>
+                                </div>
+                                <div class="stdout std form-group">
+                                    <label for="stdout">StdOut</label>
+                                    <textarea class="form-control" id="stdout" rows="5" coloums = "5"></textarea>
+                                </div>
+                    </div>
+                </form>
+                <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="codeFile" accept="">
+                        <label id="codeFileLabel" class="custom-file-label" for="codeFile">Choose file</label>
+                </div>
+                <button id="submit" class="btn btn-primary" type="submit">Submit</button>
+            </div>
+    </section>
+    <section>
+  <!-- Modal -->
+  <div class="modal fade " id="javamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Requirements for Java</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <p>There should be no package name. The name of the public classes should be only 'main'(case-sensitive)</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="modal-footer-btn" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+    
+    <footer id="footer">
+            <h4>GET IN TOUCH</h4>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://plus.google.com/114829169850440183349"><i class="fab fa-google-plus"></i></a>	
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.facebook.com/siddharth.narayan.71"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/awesid"><i class="fab fa-github"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/awesid001/"><i class="fab fa-instagram"></i></a>
+                </li>
+                </ul>
+        </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

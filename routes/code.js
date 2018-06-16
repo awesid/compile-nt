@@ -310,7 +310,7 @@ router.post('/',(req,res,next)=>{
                 return;
             }
         });
-        exec('python2 test.py', (err,stdout,stderr)=>{
+        exec('python2 test.py < inp.txt > out.txt', (err,stdout,stderr)=>{
             if(err){
                 console.log(err);
                 var error = new Error("Compilation Error: " + err);
@@ -359,7 +359,7 @@ router.post('/',(req,res,next)=>{
                 return;
             }
         });
-        exec('python3 test.py', (err,stdout,stderr)=>{
+        exec('python3 test.py < inp.txt >out.txt', (err,stdout,stderr)=>{
             if(err){
                 console.log(err);
                 var error = new Error("Compilation Error: " + err);

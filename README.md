@@ -7,7 +7,7 @@ To use make sure you have node installed. Follow the given steps:
         1. Clone this repository.
         2. cd into the repository.
         3. Open Terminal from the repository.
-        4. Run command "npm install".
+        4. Run command "npm install" and "npm start".
         5. Go to http://localhost:3000/
 ```
 Currently only tested for Linux OS. May or may not work in Windows/MacOS.
